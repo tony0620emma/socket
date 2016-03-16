@@ -1,0 +1,19 @@
+#! /usr/bin/env python
+# encoding: utf-8
+
+search_path = []
+
+if not bld.is_mkspec_platform('windows'):
+    search_path = ['.']
+
+bld.program(features='c',
+            source='server_decode.c',
+            target='../../server_decode',
+            rpath=search_path,
+            use=['kodoc'])
+
+bld.program(features='c',
+            source='client_encode.c',
+            target='../../client_encode',
+            rpath=search_path,
+            use=['kodoc'])
