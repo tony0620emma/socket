@@ -1,0 +1,25 @@
+The C codes can transport data in UDP from client to server.
+
+First, compile C codes with makefile.
+
+Makefile has two parts, one is "main" for compile server and client.
+
+Another is "clean" for delete execution file.
+
+Execute $make main to compile in terminal, then you can test these codes.
+
+You have to execute server first and then client in two different terminal.
+
+Before execution, make sure you had put data file that will be transported in codes file.
+
+-----------------------------------------------------------------------------------------
+
+After execute server and client in two terminal.
+
+You can see client finished when all data already transport.
+
+If server finished too, that means all packets transport successfully.
+
+Else if server wasn't finished, that means there were some packets lost.
+
+Then you can see transport success rate in server terminal.
